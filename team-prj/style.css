@@ -334,7 +334,7 @@ select {
 	flex-direction: row;
 	align-items: center;
 
-	> svg {
+	> img {
 		margin-right: 5px;
 	}
 }

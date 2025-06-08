@@ -36,21 +36,31 @@ function getToDoList(newTodo, id) {
 function createErrorMsg() {
     const errorMsg = document.createElement("div");
     errorMsg.className = "inputErrorMsg";
-    errorMsg.innerHTML = `
-        <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M11.9991 15.375V12M11.9991 8.625V8.70959M20.9983 12C20.9983 13.2938 20.7253 14.5238 20.2338 15.6356L21 20.9991L16.4039 19.85C15.1019 20.5823 13.5993 21 11.9991 21C7.02906 21 3 16.9706 3 12C3 7.02944 7.02906 3 11.9991 3C16.9692 3 20.9983 7.02944 20.9983 12Z"
-                stroke="#FF6174"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-		</svg>
-		<span>할 일을 입력해주세요!</span>`
+    
+    const alertImage = document.createElement("img");
+    alertImage.src = "./assets/images/message-alert-circle.svg";
+    alertImage.alt = "경고"
+
+    const alertMessage = document.createElement("span");
+    alertMessage.innerText = "할 일을 입력해주세요!"
+
+    errorMsg.appendChild(alertImage);
+    errorMsg.appendChild(alertMessage);
+    // errorMsg.innerHTML = `
+    //     <svg
+    //         width="24"
+    //         height="24"
+    //         viewBox="0 0 24 24"
+    //         fill="none"
+    //         xmlns="http://www.w3.org/2000/svg">
+    //         <path
+    //             d="M11.9991 15.375V12M11.9991 8.625V8.70959M20.9983 12C20.9983 13.2938 20.7253 14.5238 20.2338 15.6356L21 20.9991L16.4039 19.85C15.1019 20.5823 13.5993 21 11.9991 21C7.02906 21 3 16.9706 3 12C3 7.02944 7.02906 3 11.9991 3C16.9692 3 20.9983 7.02944 20.9983 12Z"
+    //             stroke="#FF6174"
+    //             stroke-width="2"
+    //             stroke-linecap="round"
+    //             stroke-linejoin="round" />
+	// 	</svg>
+	// 	<span>할 일을 입력해주세요!</span>`
 
     if (!inputWrap.querySelector(".inputErrorMsg")) {
     inputWrap.appendChild(errorMsg);
