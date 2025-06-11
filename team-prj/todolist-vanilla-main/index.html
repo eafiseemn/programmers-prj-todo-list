@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todolist</title>
+		<link rel="stylesheet" href="./reset.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<script type="module" src="./script.js"></script>
+	</head>
+	<body>
+		<div class="todo_wrap">
+			<header class="todo_header">
+				<h1>🔮 식스센스 Todolist</h1>
+			</header>
+
+			<div class="todo_cont">
+				<form id="todoForm">
+					<div class="input_wrap">
+						<input type="text" id="addInput" placeholder="할 일 추가" />
+						<button type="submit" id="addBtn" class="add_btn">
+							<span class="blind">추가</span>
+						</button>
+						<div id="todoCount" class="todo_count">
+							남은 할 일 : <span id="remainingCount">0</span>개
+						</div>
+					</div>
+				</form>
+
+				<div class="list_wrap">
+					<ul id="todoList" class="todo_list">
+						<!-- JS로 li 항목이 추가될 예정 -->
+					</ul>
+				</div>
+
+				<button type="button" id="allDelBtn" class="all_delbtn">
+					<span>전체 삭제</span>
+				</button>
+			</div>
+		</div>
+	</body>
+</html>
